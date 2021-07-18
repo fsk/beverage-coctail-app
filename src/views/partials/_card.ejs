@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="<%= item.image  %> " alt="<%= item.strImageSource  %> " />
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4"><%= item.name %></p>
+        <p class="subtitle is-6"></p>
+      </div>
+    </div>
+
+    <div class="content">
+      <%= item.strInstructions %>
+      <p><%= item.instructions %></p>
+      <br />
+      <ul>
+        <% item.ingredient.forEach(element => { %>
+        <li><a href="/<%= element  %> "><%= element %></a></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>

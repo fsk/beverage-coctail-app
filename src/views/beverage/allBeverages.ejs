@@ -1,0 +1,13 @@
+<%- include('../partials/_header.ejs') %>
+
+<div class="columns is-multiline">
+  <% payload.forEach(item=> { %>
+
+  <div class="column is-4">
+    <%- include('../partials/_card.ejs', { item }) %>
+  </div>
+
+  <% }) %>
+</div>
+
+
